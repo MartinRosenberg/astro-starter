@@ -1,9 +1,16 @@
 {
 	"recommendations": [
+		// Language support
 		"astro-build.astro-vscode",
-		"sheltonlouis.astro-snippets",
+		"mrmlnc.vscode-json5",
+		"redhat.vscode-yaml",
+
+		// Astro utilities
 		"imgildev.vscode-astro-generator",
-		"dbaeumer.vscode-eslint"
+		"sheltonlouis.astro-snippets",
+
+		// Linting and formatting
+		"dbaeumer.vscode-eslint",
 	],
 	"unwantedRecommendations": []
 }
