@@ -1,6 +1,12 @@
 {
   "name": "astro-starter",
   "version": "0.0.1",
+  "contributors": [
+    {
+      "name": "Martin Rosenberg",
+      "url": "https://martinbrosenberg.com"
+    }
+  ],
   "type": "module",
   "scripts": {
     "astro": "astro",
