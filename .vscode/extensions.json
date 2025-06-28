@@ -10,7 +10,7 @@
 		"sheltonlouis.astro-snippets",
 
 		// Linting and formatting
-		"dbaeumer.vscode-eslint",
+		"dbaeumer.vscode-eslint"
 	],
 	"unwantedRecommendations": []
 }

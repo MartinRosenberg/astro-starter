@@ -8,7 +8,9 @@
 		"**/*"
 	],
 	"compilerOptions": {
+		"allowJs": true,
 		"baseUrl": ".",
+		"checkJs": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
 		"paths": {
