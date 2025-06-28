@@ -4,7 +4,7 @@ import parserAstro from "astro-eslint-parser"
 import pluginAstro from "eslint-plugin-astro"
 import pluginCss from "@eslint/css"
 import pluginJs from "@eslint/js"
-import pluginJson from "@eslint/json"
+import pluginJsonc from "eslint-plugin-jsonc"
 import pluginJsxA11y from "eslint-plugin-jsx-a11y"
 import pluginMarkdown from "@eslint/markdown"
 import pluginReact from "eslint-plugin-react"
@@ -42,7 +42,7 @@ export default pluginTs.config([
 			pluginTs.configs.stylisticTypeChecked,
 		],
 		rules: {
-			"@typescript-eslint/consistent-type-definitions": ["error", "type"]
+			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		},
 	},
 
@@ -75,8 +75,8 @@ export default pluginTs.config([
 			parserOptions: {
 				parser: pluginTs.parser,
 				project: true,
-			}
-		}
+			},
+		},
 	},
 
 	// CSS
@@ -89,22 +89,19 @@ export default pluginTs.config([
 
 	// JSON
 	{
-		language: "json/json",
 		files: ["**/*.json"],
-		plugins: { json: pluginJson },
-		extends: [pluginJson.configs.recommended],
+		extends: [pluginJsonc.configs["flat/recommended-with-json"]],
 	},
 	{
-		language: "json/jsonc",
 		files: ["**/*.jsonc", "**/.vscode/*.json", "**/tsconfig.json"],
-		plugins: { json: pluginJson },
-		extends: [pluginJson.configs.recommended],
+		extends: [pluginJsonc.configs["flat/recommended-with-jsonc"]],
+		rules: {
+			"jsonc/no-comments": "off",
+		},
 	},
 	{
-		language: "json/json5",
 		files: ["**/*.json5"],
-		plugins: { json: pluginJson },
-		extends: [pluginJson.configs.recommended],
+		extends: [pluginJsonc.configs["flat/recommended-with-json5"]],
 	},
 
 	// Markdown
@@ -114,11 +111,12 @@ export default pluginTs.config([
 		plugins: { markdown: pluginMarkdown },
 		languageOptions: {
 			// @ts-expect-error The Markdown plugin docs specify this property: https://github.com/eslint/markdown?tab=readme-ov-file#enabling-front-matter-in-both-commonmark-and-gfm
-			frontmatter: "yaml"
+			frontmatter: "yaml",
 		},
 		extends: [pluginMarkdown.configs.recommended],
 	},
 
 	// Disable formatting rules
-	configPrettier
+	configPrettier,
+	pluginJsonc.configs["flat/prettier"],
 ])
