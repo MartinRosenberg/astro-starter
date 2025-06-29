@@ -1,14 +1,14 @@
-import configPrettier from "eslint-config-prettier"
-import globals from "globals"
-import parserAstro from "astro-eslint-parser"
-import pluginAstro from "eslint-plugin-astro"
 import pluginCss from "@eslint/css"
 import pluginJs from "@eslint/js"
+import pluginMarkdown from "@eslint/markdown"
+import parserAstro from "astro-eslint-parser"
+import configPrettier from "eslint-config-prettier"
+import pluginAstro from "eslint-plugin-astro"
+import pluginTailwind from "eslint-plugin-better-tailwindcss"
 import pluginJsonc from "eslint-plugin-jsonc"
 import pluginJsxA11y from "eslint-plugin-jsx-a11y"
-import pluginMarkdown from "@eslint/markdown"
 import pluginReact from "eslint-plugin-react"
-import pluginTailwind from "eslint-plugin-better-tailwindcss"
+import globals from "globals"
 import pluginTs from "typescript-eslint"
 
 const ASTRO_FILES = "**/*.astro"
@@ -18,7 +18,7 @@ const JSX_FILES = "**/*.{jsx,mjsx,cjsx,tsx,mtsx,ctsx}"
 export default pluginTs.config([
 	// Ignore generated files
 	{
-		ignores: [".astro/"],
+		ignores: ["**/.astro/", "**/dist/", "**/node_modules/"],
 	},
 
 	// Astro, JavaScript, React
@@ -97,10 +97,10 @@ export default pluginTs.config([
 
 	// CSS
 	{
-		language: "css/css",
 		files: ["**/*.css"],
-		plugins: { css: pluginCss },
 		extends: [pluginCss.configs.recommended],
+		language: "css/css",
+		plugins: { css: pluginCss },
 	},
 
 	// JSON
@@ -133,6 +133,6 @@ export default pluginTs.config([
 	},
 
 	// Disable formatting rules
-	configPrettier,
-	pluginJsonc.configs["flat/prettier"],
+	// configPrettier,
+	// pluginJsonc.configs["flat/prettier"],
 ])

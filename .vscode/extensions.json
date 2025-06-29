@@ -12,6 +12,8 @@
 
 		// Linting and formatting
 		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"rvest.vs-code-prettier-eslint"
 	],
 	"unwantedRecommendations": []
 }
