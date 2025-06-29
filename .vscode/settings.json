@@ -22,19 +22,13 @@
 		{ "rule": "*", "severity": "warn" }
 	],
 	"eslint.useFlatConfig": true,
+	"prettier.configPath": "./prettier.config.mjs",
 	"prettier.requireConfig": true,
-	"vs-code-prettier-eslint.prettierLast": false,
 
 	//// Overrides
 
 	"[astro][javascript][javascriptreact][typescript][typescriptreact]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
-	"[css][json][jsonc][json5]": {
-		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-	},
-	"[markdown]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
 	//// Unsorted

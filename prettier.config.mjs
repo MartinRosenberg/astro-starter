@@ -1,9 +1,12 @@
 /**
+ * @import { Config } from "prettier"
+ */
+
+/**
  * @see {@link https://prettier.io/docs/configuration}
  * @see {@link https://prettier.io/docs/options}
- * @type {import('prettier').Config}
  */
-export default {
+export default /** @type {const} @satisfies {Config} */ ({
 	proseWrap: "always",
 	useTabs: true,
 	
@@ -15,4 +18,4 @@ export default {
 			}
 		}
 	]
-}
+})
