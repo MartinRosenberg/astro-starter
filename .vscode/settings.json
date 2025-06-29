@@ -2,6 +2,7 @@
 	"editor.codeActionsOnSave": [
 		"source.organizeLinkDefinitions",
 		"source.sortImports",
+		"source.fixAll.oxc",
 		"source.fixAll.eslint"
 	],
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -18,16 +19,15 @@
 	"eslint.lintTask.enable": true,
 	"eslint.validate": ["css"],
 	"eslint.problems.shortenToSingleLine": true,
-	"eslint.rules.customizations": [
-		{ "rule": "*", "severity": "warn" }
-	],
+	"eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
 	"eslint.useFlatConfig": true,
+	"oxc.requireConfig": true,
 	"prettier.configPath": "./prettier.config.mjs",
 	"prettier.requireConfig": true,
 
 	//// Overrides
 
-	"[astro][javascript][javascriptreact][typescript][typescriptreact]": {
+	"[astro][javascript][javascriptreact][json][jsonc][json5][typescript][typescriptreact]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 

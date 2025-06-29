@@ -7,6 +7,7 @@ import pluginAstro from "eslint-plugin-astro"
 import pluginTailwind from "eslint-plugin-better-tailwindcss"
 import pluginJsonc from "eslint-plugin-jsonc"
 import pluginJsxA11y from "eslint-plugin-jsx-a11y"
+import pluginOxlint from "eslint-plugin-oxlint"
 import pluginReact from "eslint-plugin-react"
 import globals from "globals"
 import pluginTs from "typescript-eslint"
@@ -109,7 +110,7 @@ export default pluginTs.config([
 		extends: [pluginJsonc.configs["flat/recommended-with-json"]],
 	},
 	{
-		files: ["**/*.jsonc", "**/.vscode/*.json", "**/tsconfig.json"],
+		files: ["**/*.jsonc", "**/.vscode/*.json", "**/tsconfig.json", "**/.oxlintrc.json"],
 		extends: [pluginJsonc.configs["flat/recommended-with-jsonc"]],
 		rules: {
 			"jsonc/no-comments": "off",
@@ -135,4 +136,7 @@ export default pluginTs.config([
 	// Disable formatting rules
 	// configPrettier,
 	// pluginJsonc.configs["flat/prettier"],
+
+	// Disable rules available in oxlint
+	...pluginOxlint.configs["flat/recommended"]
 ])

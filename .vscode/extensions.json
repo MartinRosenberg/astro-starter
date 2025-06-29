@@ -3,8 +3,10 @@
 		// Language support
 		"astro-build.astro-vscode",
 		"bradlc.vscode-tailwindcss",
+		"christian-kohler.npm-intellisense",
 		"mrmlnc.vscode-json5",
 		"redhat.vscode-yaml",
+		"unifiedjs.vscode-mdx",
 
 		// Astro utilities
 		"imgildev.vscode-astro-generator",
@@ -12,7 +14,8 @@
 
 		// Linting and formatting
 		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"oxc.oxc-vscode"
 	],
 	"unwantedRecommendations": []
 }
