@@ -1,0 +1,23 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	//// Extensions
+
+	"eslint.codeActionsOnSave.mode": "all",
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.problems.shortenToSingleLine": true,
+	"eslint.rules.customizations": [
+		{ "rule": "*", "severity": "warn" }
+	],
+	"eslint.useFlatConfig": true,
+
+	//// Overrides
+
+	"[astro][css][javascript][javascriptreact][json][jsonc][json5][markdown][typescript][typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+}

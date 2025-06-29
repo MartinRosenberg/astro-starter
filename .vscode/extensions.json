@@ -2,6 +2,7 @@
 	"recommendations": [
 		// Language support
 		"astro-build.astro-vscode",
+		"bradlc.vscode-tailwindcss",
 		"mrmlnc.vscode-json5",
 		"redhat.vscode-yaml",
 
@@ -10,7 +11,7 @@
 		"sheltonlouis.astro-snippets",
 
 		// Linting and formatting
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
 	],
 	"unwantedRecommendations": []
 }
