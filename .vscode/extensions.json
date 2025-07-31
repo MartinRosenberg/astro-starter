@@ -1,0 +1,18 @@
+{
+	"recommendations": [
+		//// Language support
+		"astro-build.astro-vscode",
+		"christian-kohler.npm-intellisense",
+		"unifiedjs.vscode-mdx",
+
+		//// Astro tools
+		"imgildev.vscode-astro-generator",
+		"sheltonlouis.astro-snippets",
+		"redhat.vscode-yaml",
+
+		//// Formatting and linting
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode"
+	],
+	"unwantedRecommendations": []
+}

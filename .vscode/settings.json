@@ -1,0 +1,47 @@
+{
+	"editor.codeActionsOnSave": [
+		"source.organizeLinkDefinitions",
+		"source.sortImports",
+		"source.fixAll.oxc",
+		"source.fixAll.eslint"
+	],
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.formatOnType": false,
+	"files.autoSave": "off",
+
+	//// Extensions
+
+	"eslint.codeActionsOnSave.mode": "all",
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.validate": ["css"],
+	"eslint.problems.shortenToSingleLine": true,
+	"eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+	"eslint.useFlatConfig": true,
+	"oxc.requireConfig": true,
+	"prettier.configPath": "./prettier.config.mjs",
+	"prettier.requireConfig": true,
+	"redhat.telemetry.enabled": false,
+	"yaml.format.singleQuote": true,
+
+	//// Overrides
+
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+
+	"[javascript][javascriptreact][typescript][typescriptreact]": {
+		"editor.defaultFormatter": "oxc.oxc-vscode"
+	},
+
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+
+	//// Unsorted
+
+	"//": ""
+}
