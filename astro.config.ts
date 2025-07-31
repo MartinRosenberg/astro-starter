@@ -8,11 +8,11 @@ import { defineConfig } from "astro/config"
  * @see {@link https://astro.build/config}
  */
 export default defineConfig({
-  adapter: netlify(),
-  integrations: [react(), mdx()],
-  site: "https://example.com", // TODO
+	adapter: netlify(),
+	integrations: [react(), mdx()],
+	site: "https://example.com", // TODO
 	trailingSlash: "always",
-  vite: {
-    plugins: [tailwindcss()]
-  },
+	vite: {
+		plugins: [tailwindcss()],
+	},
 })

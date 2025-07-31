@@ -11,15 +11,15 @@ const config = /** @type {const} @satisfies {Config} */ ({
 	quoteProps: "consistent",
 	semi: false,
 	useTabs: true,
-	
+
 	overrides: [
 		{
 			files: ".github/*.md",
 			options: {
-				proseWrap: "preserve"
-			}
-		}
-	]
+				proseWrap: "preserve",
+			},
+		},
+	],
 })
 
 export default config
