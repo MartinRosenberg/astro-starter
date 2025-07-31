@@ -50,6 +50,7 @@
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"@parcel/watcher",
+			"@tailwindcss/oxide",
 			"esbuild",
 			"sharp"
 		]
